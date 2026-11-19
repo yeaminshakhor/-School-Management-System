@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Review Admissions</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="admin" data-nav="" data-title="Review Admissions">
+<main class="wrap" id="main">
+<h1>Review admissions</h1>
+<div class="alert alert-info">Demo mode: all data is stored in this browser only (no server or database).</div>
+
+<section class="stats" id="stats" aria-label="Summary"></section>
+
+<form method="get" action="admin.html" class="filter-bar">
+  <label class="sr-only" for="q">Search</label>
+  <input type="search" id="q" name="q" placeholder="Search name, guardian, phone or ID" maxlength="60">
+  <label class="sr-only" for="status">Status</label>
+  <select id="status" name="status">
+    <option value="">All statuses</option>
+    <option value="pending">Pending</option>
+    <option value="accepted">Accepted</option>
+    <option value="rejected">Rejected</option>
+  </select>
+  <button class="btn btn-primary" type="submit">Filter</button>
+  <a class="btn btn-outline" id="clear-filter" href="admin.html" hidden>Clear</a>
+</form>
+
+<div id="admission-list"></div>
+<div id="pager"></div>
+
+<p class="demo-tools">Testing: <button class="btn btn-small btn-outline" type="button" id="reset-demo">Reset to sample data</button></p>
+</main>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Apply for Admission</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="admission" data-nav="admission" data-title="Apply for Admission">
+<main class="wrap" id="main">
+<h1>Online admission form</h1>
+<p class="lead">Fill in the details below. After you submit, you will get an application ID and a printable slip. All fields are required.</p>
+
+<div id="form-error"></div>
+
+<form id="admission-form" class="form" novalidate autocomplete="off">
+  <fieldset>
+    <legend>Applicant details</legend>
+    <div class="grid-2">
+      <div class="field">
+        <label for="applicant_name">Applicant full name</label>
+        <input type="text" id="applicant_name" name="applicant_name" maxlength="100" required aria-describedby="err-applicant_name">
+      </div>
+      <div class="field">
+        <label for="date_of_birth">Date of birth</label>
+        <input type="date" id="date_of_birth" name="date_of_birth" required aria-describedby="err-date_of_birth">
+      </div>
+    </div>
+    <div class="field">
+      <label for="class_applied">Class applying for</label>
+      <select id="class_applied" name="class_applied" required aria-describedby="err-class_applied">
+        <option value="">Select a class</option>
+      </select>
+    </div>
+  </fieldset>
+
+  <fieldset>
+    <legend>Guardian details</legend>
+    <div class="field">
+      <label for="guardian_name">Guardian full name</label>
+      <input type="text" id="guardian_name" name="guardian_name" maxlength="100" required aria-describedby="err-guardian_name">
+    </div>
+    <div class="grid-2">
+      <div class="field">
+        <label for="phone">Mobile number</label>
+        <input type="tel" id="phone" name="phone" inputmode="tel" maxlength="20" required placeholder="01712345678" aria-describedby="err-phone">
+      </div>
+      <div class="field">
+        <label for="email">Email address</label>
+        <input type="email" id="email" name="email" maxlength="120" required aria-describedby="err-email">
+      </div>
+    </div>
+  </fieldset>
+
+  <button class="btn btn-primary" type="submit">Submit application</button>
+</form>
+</main>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

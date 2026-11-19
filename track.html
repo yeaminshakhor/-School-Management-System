@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Track Application</title>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body data-page="track" data-nav="track" data-title="Track Application">
+<main class="wrap" id="main">
+<h1>Track your application</h1>
+<p class="lead">Enter the application ID you received (for example <strong>ADM-00012</strong>) and the mobile number used in the form.</p>
+
+<div id="track-error"></div>
+
+<form id="track-form" class="form narrow" novalidate>
+  <div class="field">
+    <label for="application_id">Application ID</label>
+    <input type="text" id="application_id" name="application_id" required maxlength="20" autocomplete="off">
+  </div>
+  <div class="field">
+    <label for="phone">Mobile number</label>
+    <input type="tel" id="phone" name="phone" inputmode="tel" required maxlength="20" placeholder="01712345678">
+  </div>
+  <button class="btn btn-primary" type="submit">Check status</button>
+</form>
+
+<div id="track-result"></div>
+</main>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
