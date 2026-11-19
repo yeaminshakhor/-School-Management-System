@@ -1,0 +1,19 @@
+TEACHER MODULE (Member 2) - how to run
+
+1. Extract the whole zip. Keep this structure (do not move files out of their folders):
+
+   teacher-dashboard.html, teacher-students.html, teacher-attendance.html,
+   teacher-marks.html, teacher-notices.html
+   css/  style.css, teacher.css
+   js/   teacher-common.js, teacher-dashboard.js, teacher-students.js,
+         teacher-attendance.js, teacher-marks.js, teacher-notices.js
+
+   css/style.css is a copy of Member 4's file. When you merge with the group, keep
+   THEIR css/style.css and just add teacher.css and the teacher-*.js files.
+
+2. Open teacher-dashboard.html by double-clicking it (from File Explorer), or serve
+   the whole teacher-module folder with a static HTTP server.
+
+3. The module automatically starts as Demo Teacher (user_id 2) while Member 3's
+   login page is not available. Member 3's login can replace this automatically
+   by saving {user_id, role: 'teacher'} under the 'sms_user' sessionStorage key.

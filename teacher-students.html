@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Students | Teacher | Greenfield School</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/teacher.css">
+</head>
+<body class="t-body" data-page="students">
+<div id="t-header"></div>
+<div class="t-shell">
+<aside class="t-side" id="t-sidebar"></aside>
+<main class="t-main">
+<div class="t-title-row"><h1><span data-icon="students"></span>Student List</h1></div>
+
+<p class="empty" id="no-class" hidden>You are not assigned to any class yet. Ask the admin to assign you a class or a subject.</p>
+
+<div id="content">
+  <div class="t-toolbar">
+    <div class="field"><label for="class">Class</label><select id="class"><option value="">All my classes</option></select></div>
+    <div class="field grow"><label for="q">Search</label><input type="search" id="q" placeholder="Name, student ID or roll number" maxlength="60"></div>
+    <button class="btn btn-outline" type="button" id="clear-btn">Clear</button>
+  </div>
+  <div class="t-summary" id="summary"></div>
+  <p class="empty" id="empty" hidden>No students found.</p>
+  <div class="t-table-card table-scroll" id="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Roll</th><th>Student ID</th><th>Name</th><th>Class</th><th>Guardian</th><th>Date of birth</th><th>Attendance</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <p class="t-note">Attendance is the share of recorded days marked Present or Late.</p>
+</div>
+</main>
+</div>
+<script src="js/teacher-common.js"></script>
+<script src="js/teacher-students.js"></script>
+</body>
+</html>

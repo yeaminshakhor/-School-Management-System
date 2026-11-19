@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dashboard | Teacher | Greenfield School</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/teacher.css">
+</head>
+<body class="t-body" data-page="dashboard">
+<div id="t-header"></div>
+<div class="t-shell">
+<aside class="t-side" id="t-sidebar"></aside>
+<main class="t-main">
+<div class="t-title-row">
+  <h1><span data-icon="chart"></span>Teacher Dashboard</h1>
+  <div class="t-date"><span data-icon="calendar"></span><span id="t-date"></span></div>
+</div>
+
+<section class="t-stats" aria-label="Summary">
+  <a class="t-stat blue" href="teacher-students.html"><span class="ic" data-icon="students"></span><div><strong id="s-students">0</strong>My Students</div></a>
+  <a class="t-stat green" href="teacher-attendance.html"><span class="ic" data-icon="dashboard"></span><div><strong id="s-classes">0</strong>My Classes</div></a>
+  <a class="t-stat purple" href="teacher-marks.html"><span class="ic" data-icon="book"></span><div><strong id="s-subjects">0</strong>My Subjects</div></a>
+  <a class="t-stat orange" href="teacher-notices.html"><span class="ic" data-icon="notices"></span><div><strong id="s-notices">0</strong>Notices Posted</div></a>
+</section>
+
+<div class="t-two">
+  <section class="t-panel">
+    <h2><span data-icon="chart"></span>Overview: students per class</h2>
+    <div id="chart"></div>
+  </section>
+  <section class="t-panel">
+    <div class="t-panel-head"><h2><span data-icon="history"></span>Recent Activity</h2><button class="t-link" type="button" id="act-more">View All</button></div>
+    <ul class="t-activity" id="activity"></ul>
+  </section>
+</div>
+
+<section class="t-panel">
+  <h2><span data-icon="bolt"></span>Quick Actions</h2>
+  <div class="t-quick">
+    <a class="q-blue" href="teacher-students.html"><span data-icon="students"></span>View Students</a>
+    <a class="q-green" href="teacher-attendance.html"><span data-icon="attendance"></span>Take Attendance</a>
+    <a class="q-purple" href="teacher-marks.html"><span data-icon="marks"></span>Upload Marks</a>
+    <a class="q-orange" href="teacher-notices.html"><span data-icon="notices"></span>Post Notice</a>
+  </div>
+</section>
+</main>
+</div>
+<script src="js/teacher-common.js"></script>
+<script src="js/teacher-dashboard.js"></script>
+</body>
+</html>

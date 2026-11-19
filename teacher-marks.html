@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Marks | Teacher | Greenfield School</title>
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/teacher.css">
+</head>
+<body class="t-body" data-page="marks">
+<div id="t-header"></div>
+<div class="t-shell">
+<aside class="t-side" id="t-sidebar"></aside>
+<main class="t-main">
+<div class="t-title-row"><h1><span data-icon="marks"></span>Upload Marks</h1></div>
+<div class="alert" id="message" role="status" hidden></div>
+
+<p class="empty" id="no-class" hidden>You are not teaching any subject yet. Ask the admin to assign you a subject.</p>
+
+<div id="content">
+  <div class="t-toolbar">
+    <div class="field"><label for="class">Class</label><select id="class"></select></div>
+    <div class="field"><label for="subject">Subject</label><select id="subject"></select></div>
+    <div class="field"><label for="exam">Exam</label><select id="exam"></select></div>
+  </div>
+  <p class="t-note" id="state"></p>
+  <div class="t-summary" id="summary"></div>
+  <p class="empty" id="empty" hidden>This class has no students yet.</p>
+  <div class="t-table-card table-scroll" id="table-wrap">
+    <table class="data-table">
+      <thead><tr><th>Roll</th><th>Name</th><th>Marks (out of 100)</th><th>Grade</th></tr></thead>
+      <tbody id="rows"></tbody>
+    </table>
+  </div>
+  <div class="t-actions" id="actions"><button class="btn btn-primary" type="button" id="save-btn">Save marks</button></div>
+</div>
+</main>
+</div>
+<script src="js/teacher-common.js"></script>
+<script src="js/teacher-marks.js"></script>
+</body>
+</html>
